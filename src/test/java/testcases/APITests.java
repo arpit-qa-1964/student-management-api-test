@@ -41,7 +41,7 @@ public class APITests extends BaseTest {
 
 		api.sendPUTRequest("22345", "James", "Kos", "3A", "Singapore");
 		api.validateStatusCodeToBe(200);
-		api.verifyResponseBody("lastName", "Kos");
+		api.verifyResponseBody("lastName", "Kos"); //Validating the Updated Last Name from the Response Body
 	}
 
 	@Title("Fetch All the Students Data")
@@ -50,7 +50,7 @@ public class APITests extends BaseTest {
 
 		api.sendGetRequestForAllStudents();
 		api.validateStatusCodeToBe(200);
-		api.verifyResponseBodySize(2);
+		api.verifyResponseBodySize(2); // Validating the size of the Response Body for two students data
 
 	}
 
@@ -60,7 +60,7 @@ public class APITests extends BaseTest {
 
 		api.sendGetRequestForStudentId("22345");
 		api.validateStatusCodeToBe(200);
-		api.verifyResponseBodySize(1);
+		api.verifyResponseBodySize(1); // Validating the size of the Response Body for one student data
 
 	}
 
@@ -70,7 +70,7 @@ public class APITests extends BaseTest {
 
 		api.sendGetRequestForStudentClass("3B");
 		api.validateStatusCodeToBe(200);
-		api.verifyResponseBodySize(1);
+		api.verifyResponseBodySize(1);  // Validating the size of the Response Body of one student data for a Student Class
 
 	}
 
@@ -80,7 +80,7 @@ public class APITests extends BaseTest {
 
 		api.sendGetRequestForStudentIdStudentClass("22346", "3B");
 		api.validateStatusCodeToBe(200);
-		api.verifyResponseBodySize(1);
+		api.verifyResponseBodySize(1); // Validating the size of the Response Body for one student data
 
 	}
 
@@ -91,7 +91,7 @@ public class APITests extends BaseTest {
 		api.sendDeleteRequestForStudent("22345");
 		api.validateStatusCodeToBe(200);
 		api.sendGetRequestForAllStudents();
-		api.verifyResponseBodySize(1);
+		api.verifyResponseBodySize(1);  // Validating the size of the Response Body when only one student data has been left in the record
 
 	}
 
@@ -102,7 +102,7 @@ public class APITests extends BaseTest {
 		api.sendDeleteRequestForStudent("22346");
 		api.validateStatusCodeToBe(200);
 		api.sendGetRequestForAllStudents();
-		api.verifyResponseBodySize(0);
+		api.verifyResponseBodySize(0); // Validating the size of the Response Body when none student data has been left in the record
 
 	}
 }

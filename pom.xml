@@ -17,44 +17,39 @@
 
 
 	<dependencies>
-
-
+	<!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core -->
 		<dependency>
 			<groupId>net.serenity-bdd</groupId>
 			<artifactId>serenity-core</artifactId>
 			<version>${serenity.version}</version>
-
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit -->
 		<dependency>
 			<groupId>net.serenity-bdd</groupId>
 			<artifactId>serenity-junit</artifactId>
 			<version>${serenity.version}</version>
 			<scope>test</scope>
 		</dependency>
-
-
 		<!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-rest-assured -->
 		<dependency>
 			<groupId>net.serenity-bdd</groupId>
 			<artifactId>serenity-rest-assured</artifactId>
 			<version>${serenity.restassured.version}</version>
 		</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
 			<version>1.7.30</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.13</version>
 			<scope>test</scope>
 		</dependency>
-
-
 	</dependencies>
 
 
